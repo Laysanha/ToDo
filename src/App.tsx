@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Item } from "./types/item";
 import { ListIltem } from "./compoments/Listitem";
+import { AddArea } from "./compoments/AddArea";
 
 function App() {
   const [ lista, setLista ] = useState<Item[]>([
@@ -10,10 +11,13 @@ function App() {
   ])
 
   return (
-    <div className="text-2xl font-semibold m-10">
-      Lista de tarefas / TO DO
-      <div className="text-base font-normal border-2 border-gray-800 bg-gray-800 my-4 py-2 rounded-md">
-        
+    <div className="text-2xl font-semibold m-10 flex flex-col gap-4">
+      
+      <p>Lista de tarefas / TO DO</p>
+
+      <AddArea/>
+
+      <div className="w-full text-base font-normal border-2 border-gray-800 bg-gray-800 my-4 py-2 rounded-md">
         {lista.map((item, index) => (
           <ListIltem key={index} item={item}/>
         ))}
