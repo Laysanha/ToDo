@@ -6,17 +6,17 @@ type Props ={
 }
 
 export const ListIltem = ({ item } :Props) => {
-    const [isChecekd, setisChecekd] = useState(item.done);
-
+    const [isChecked, setisChecked] = useState(item.done);
+    
     return(
-        <div className='pt-4 pl-6 gap-2 flex checked:line-through'>
+        <div className='pt-4 pl-6 flex gap-2'>
             <input 
                 type="checkbox" 
-                checked={isChecekd}
-                onChange={e => setisChecekd(e.target.checked)}
-                className="w-6" 
+                checked={isChecked}
+                onChange={e => setisChecked(e.target.checked)}
+                className="w-5" 
             />
-            <label> {item.name} </label>
+            <label className={ isChecked ? 'line-through' : '' }> {item.name} </label>
         </div>
     )
 }

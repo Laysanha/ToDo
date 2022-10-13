@@ -3,7 +3,6 @@ import { Item } from "./types/item";
 import { ListIltem } from "./compoments/Listitem";
 
 function App() {
-
   const [ lista, setLista ] = useState<Item[]>([
     { id: 1, name: 'Estudar programação', done: false },
     { id: 2, name: 'Tomar água', done: true },
