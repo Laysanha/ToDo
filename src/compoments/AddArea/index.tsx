@@ -1,4 +1,5 @@
-import { useState, KeyboardEvent } from "react"
+import { useState, KeyboardEvent } from "react";
+import { Plus } from "phosphor-react";
 
 type Props = {
     onEnter: (taskname: string) => void
@@ -15,7 +16,9 @@ export const AddArea = ({onEnter} : Props) => {
 
     return(
         <div className="p-4 py-3 border border-gray-700 rounded-2xl flex flex-row gap-2 justify-center">
-            <p className="text-3xl">+</p>
+            <p className="text-3xl flex items-center">
+                <Plus size={24} color="#dad2d2" weight="fill" /> 
+            </p>
 
             <input 
                 type="text"

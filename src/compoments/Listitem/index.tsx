@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Item } from '../../types/item';
 
 type Props ={
@@ -6,7 +6,7 @@ type Props ={
 }
 
 export const ListIltem = ({ item } :Props) => {
-    const [isChecked, setisChecked] = useState(item.done);
+    const [isChecked, setisChecked] = useState(item.done); 
 
     return(
         <div className='py-2 pl-6 w-full flex gap-2'>
@@ -14,9 +14,11 @@ export const ListIltem = ({ item } :Props) => {
                 type="checkbox" 
                 checked={isChecked}
                 onChange={e => setisChecked(e.target.checked)}
-                className="w-5 accent-pink-500" 
-            />
-            <label className={ isChecked ? 'line-through text-stone-400' : '' }> {item.name} - {item.done.toString()} </label>
+                className="w-5 accent-pink-500"
+                />
+            <label className = { isChecked ? 'line-through text-stone-400' : '' }>                 
+                { item.name } ESTADO: { item.done.toString() } 
+            </label>
         </div>
     )
 }
