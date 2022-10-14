@@ -16,7 +16,7 @@ export const ListIltem = ({ item } :Props) => {
                 onChange={e => setisChecked(e.target.checked)}
                 className="w-5 accent-pink-500" 
             />
-            <label className={ isChecked ? 'line-through text-stone-400' : '' }> {item.name} </label>
+            <label className={ isChecked ? 'line-through text-stone-400' : '' }> {item.name} - {item.done.toString()} </label>
         </div>
     )
 }
