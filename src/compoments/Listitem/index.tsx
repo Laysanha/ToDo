@@ -17,7 +17,7 @@ export const ListIltem = ({ item } :Props) => {
                 className="w-5 accent-pink-500"
                 />
             <label className = { isChecked ? 'line-through text-stone-400' : '' }>                 
-                { item.name }
+                {item.id} - { item.name } 
             </label>
         </div>
     )

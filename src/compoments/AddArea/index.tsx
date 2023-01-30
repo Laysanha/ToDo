@@ -19,7 +19,6 @@ export const AddArea = ({onEnter} : Props) => {
             <p className="text-3xl flex items-center">
                 <Plus size={24} color="#dad2d2" weight="fill" /> 
             </p>
-
             <input 
                 type="text"
                 placeholder="Adicione uma tarefa..."
